@@ -22,6 +22,17 @@ function scoresAverage(moviesArray){
     return sumaverageScore
 }
 
+
+    //if (moviesArray.length === 0) {
+        return 0
+    //} else {
+        const filteredArr = moviesArray.filter (currentMovie => currentMovie.score && typeof currentMovie.score === "number");
+        const sum = moviesArray.reduce((acc, currentMovie) => acc + currentMovie.score, 0);
+        const sumaverageScore = sum / moviesArray.length;
+        return sumaverageScore.toFixed(2);
+
+
+
 // Iteration 4: Drama movies - Get the average of Drama Movies
 function dramaMoviesScore(moviesArray) {}
 
